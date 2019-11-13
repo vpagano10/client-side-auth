@@ -8,7 +8,8 @@ function Account(props) {
 	})
 
 	useEffect(() => {
-		api().get("/me")
+		api()
+			.get("/me")
 			.then(result => {
 				setUser({
 					name: result.data.name,
@@ -23,7 +24,6 @@ function Account(props) {
 	return (
 		<>
 			<h1>My Account</h1>
-
 			<div className="account-row">Name: {user.name}</div>
 			<div className="account-row">Email: {user.email}</div>
 		</>

@@ -14,7 +14,6 @@ function App() {
 		<div className="wrapper">
 			<nav>
 				<Link to="/">Home</Link>
-
 				{/* We can conditionally show links if logged in or not */}
 				{!signedIn && <Link to="/signin">Sign In</Link>}
 				{signedIn && <Link to="/account">My Account</Link>}
@@ -29,4 +28,5 @@ function App() {
 	)
 }
 
+// withRouter re-renders with route changes
 export default withRouter(App)
